@@ -92,7 +92,8 @@ i {
   left: 100px;
   cursor: grab;
 }
-input[type="file"] {
+input[type="file"],
+#download-link {
   display: none;
   /* visibility: hidden; */
 }
