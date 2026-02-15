@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.btn {
+  all: unset;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease-in-out;
+  position: relative;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: blanchedalmond;
+}
+i {
+  font-size: 20px;
+}
+/* Toolbar/checkboard container */
+.blaqdpad {
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  /* padding: 5px; */
+}
+/* Toolbar */
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;
+  background-color: rgb(8, 51, 68);
+}
+.tools {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* descriptio styles */
+.description {
+  visibility: hidden;
+  background-color: rgb(8, 51, 68);
+  color: blanchedalmond;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+  left: 50%;
+  margin-left: 60%;
+}
+.btn:hover .description {
+  visibility: visible;
+  transition: all 300ms ease-in;
+}
+/* why did black and white for the two gradient not work */
+.checkboard {
+  background-color: #fafafa;
+  background-image:
+    linear-gradient(to bottom, #e0e0e0 50%, transparent 50%),
+    linear-gradient(90deg, #e0e0e0 50%, transparent 50%);
+  background-size: 40px 40px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.img-layer,
+.cnv-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.img-layer {
+  z-index: 1;
+}
+.cnv-layer {
+  z-index: 2;
+  pointer-events: none;
+}
+.img-file {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  cursor: grab;
+}
+input[type="file"] {
+  display: none;
+  /* visibility: hidden; */
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An online use to draw, import and edit imges and share too"
+    />
+    <link rel="stylesheet" href="blaqdpad.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <script src="blaqdpad.js" defer></script>
+    <title>BlaqdPad - Import, Edit, Draw, Share!</title>
+  </head>
+  <body>
+    <div class="blaqdpad">
+      <aside class="toolbar">
+        <div class="tools_top tools">
+          <button class="select btn">
+            <i class="ph-duotone ph-cursor"></i>
+            <span class="description">Select</span>
+          </button>
+          <button class="import btn">
+            <i class="ph-duotone ph-file-arrow-down"></i>
+            <span class="description">Import</span>
+          </button>
+          <button class="pencil btn">
+            <i class="ph-duotone ph-pencil"></i>
+            <span class="description">Pencil</span>
+          </button>
+          <button class="new-file btn">
+            <i class="ph-duotone ph-file-plus"></i>
+            <span class="description">New Canva</span>
+          </button>
+          <button class="download btn">
+            <i class="ph-bold ph-download"></i>
+            <span class="description">Download</span>
+          </button>
+        </div>
+        <div class="tools_bottom tools">
+          <button class="setting btn">
+            <i class="ph-duotone ph-wrench"></i>
+            <span class="description">Settings</span>
+          </button>
+        </div>
+      </aside>
+      <main class="checkboard">
+        <div class="img-layer"></div>
+        <canvas class="cnv-layer"></canvas>
+      </main>
+    </div>
+    <input type="file" accept="image/*" id="input" />
+    <a href="" id="download-link"></a>
+  </body>
+</html>
