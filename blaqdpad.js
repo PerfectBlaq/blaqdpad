@@ -1,17 +1,12 @@
 "use strict";
 const canvas = document.querySelector(".cnv-layer");
-console.log(canvas);
-// workspace is the container of my canvas element in HTML
+// workspace is the container of my canvas and div.img-layer element in HTML
 const workspace = document.querySelector(".checkboard");
-console.log(workspace);
 // getting the rectangle properties of the workspace
 const rectProp = workspace.getBoundingClientRect();
-console.table(rectProp);
-console.log(rectProp.width, rectProp.height);
 canvas.width = rectProp.width;
 canvas.height = rectProp.height;
-console.log(canvas.height, canvas.width);
-// Declaring tools and tool state || getting elements from the DOM
+// Declaring tools and tool state && getting elements from the DOM
 let activeTool = "select";
 const selectTool = document.querySelector(".select");
 const importTool = document.querySelector(".import");
@@ -44,10 +39,8 @@ importTool.addEventListener("click", () => {
 inputImg.addEventListener("change", () => {
   const file = inputImg.files[0];
   inputImg.value = "";
-  console.log(inputImg.value);
   if (!file) return;
   const imgUrl = URL.createObjectURL(file);
-  console.log(imgUrl);
   const img = document.createElement("img");
   img.src = imgUrl;
   img.classList.add("img-file");
@@ -76,7 +69,6 @@ document.addEventListener("mouseup", () => {
 });
 //Pencil Tool
 const context = canvas.getContext("2d");
-// console.log(context);
 let isDrawing = false;
 let lastX = 0;
 let lastY = 0;
