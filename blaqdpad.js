@@ -70,15 +70,11 @@ document.addEventListener("mouseup", () => {
 //Pencil Tool
 const context = canvas.getContext("2d");
 let isDrawing = false;
-let lastX = 0;
-let lastY = 0;
 canvas.addEventListener("mousedown", (e) => {
   if (activeTool !== "pencil") return;
   isDrawing = true;
-  lastX = e.offsetX;
-  lastY = e.offsetY;
   context.beginPath();
-  context.moveTo(lastX, lastY);
+  context.moveTo(e.offsetLeft, e.offsetTop);
   context.lineWidth = 3;
 });
 canvas.addEventListener("mousemove", (e) => {
